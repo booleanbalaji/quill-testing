@@ -3,25 +3,19 @@
 <head>
 <link rel="stylesheet" type="text/css" href="quill.base.css">
 <link rel="stylesheet" type="text/css" href="quill.snow.css">
-<style type="text/css">
-  #toolbar {
-  border: 1px solid #e5e5e5;
-  width: 100%;
-  margin: 20px auto;
-  box-shadow: 2px 1px 5px rgba(0,0,0,0.2);
-}
-#editor {
-  width: 100%;
-  margin: 20px auto;
-    box-shadow: 2px 1px 5px rgba(0,0,0,0.2);
-    border: 1px solid #e5e5e5;
-  height: 300px;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <!-- Create the toolbar container -->
-<div id="toolbar" class="sc-toolbar-container toolbar">
+<!-- Always on top: Position Fixed-->
+<header>
+    <h1>Quill Demo</h1>
+</header>
+<!-- Fixed size after header-->
+<div class="content">
+    <!-- Scrollable div with main content -->
+    <div class="scrollable">
+        <!-- Create the toolbar container -->
+        <div id="toolbar" class="sc-toolbar-container toolbar">
   <span class="ql-format-group">
   <select title="Font" class="ql-font">
     <option value="sans-serif" selected="">Sans Serif</option>
@@ -139,6 +133,17 @@
   <p>Hello World!</p>
   <p>This is just some sample text you can <b>delete</b>.</p>
 </div>
+    </div>
+    <!-- Always on top. Fixed position, fixed width, relative to content width -->
+    <div class="sidebar">
+        sidebar-right
+    </div>
+</div>
+<!-- Always at the end of the page -->
+<footer>
+    <h3>Boolean Balaji</h3>
+</footer>
+  
 
 <script src="//cdn.quilljs.com/0.19.8/quill.js"></script>
 <script type="text/javascript">
